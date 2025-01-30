@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_FOO</name>
+	<creationDate>[DATE]</creationDate>
+	<author>[AUTHOR]</author>
+	<authorEmail>[AUTHOR_EMAIL]</authorEmail>
+	<authorUrl>[AUTHOR_URL]</authorUrl>
+	<copyright>[COPYRIGHT]</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>PLG_SYSTEM_FOO_XML_DESCRIPTION</description>
+
+	<!-- Файл сценарію установки -->
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Мовні файли -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_foo.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_foo.sys.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.plg_system_foo.ini</language>
+		<language tag="uk-UA">uk-UA/uk-UA.plg_system_foo.sys.ini</language>
+	</languages>
+
+	<!-- Файли плагіна -->
+	<files>
+		<filename plugin="foo">foo.php</filename>
+		<folder>language</folder>
+	</files>
+
+	<!-- Параметри конфігурації -->
+	<config>
+		<fields name="params">
+			<fieldset name="basic" label="PLG_SYSTEM_FOO_FIELDSET_BASIC">
+				<field
+					name="sample"
+					type="text"
+					default="42"
+					label="PLG_SYSTEM_FOO_SAMPLE_LABEL"
+					description="PLG_SYSTEM_FOO_SAMPLE_DESCRIPTION"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<!-- Оновлення плагіна -->
+	<updateservers>
+		<server type="extension" priority="1" name="[PROJECT_NAME]">https://www.example.com/plg_foo.xml</server>
+	</updateservers>
+</extension>
